@@ -1,0 +1,1776 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tech Free | Assistência Técnica</title>
+
+<link rel="stylesheet" href="Style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+<div class="app-container">
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="brand">
+
+        <div class="brand-icon">
+            ⚙
+        </div>
+
+        <span class="brand-name">
+            Tech Free
+        </span>
+
+    </div>
+
+    <button
+        class="header-button"
+        onclick="notifications()">
+
+        🔔
+
+    </button>
+
+</header>
+
+
+
+<!-- =====================================================
+     1 — LOGIN
+===================================================== -->
+
+<section
+    class="screen active"
+    id="login">
+
+    <div class="auth-header">
+
+        <div class="auth-logo">
+            ⚙
+        </div>
+
+        <h1>
+            Tech Free
+        </h1>
+
+        <p>
+            Encontre ajuda técnica perto de você.
+        </p>
+
+    </div>
+
+
+    <div class="auth-card">
+
+        <div class="input-group">
+
+            <label>
+                E-mail ou telefone
+            </label>
+
+            <input
+                class="input"
+                id="loginEmail"
+                placeholder="seu@email.com">
+
+        </div>
+
+
+        <div class="input-group">
+
+            <label>
+                Senha
+            </label>
+
+            <input
+                class="input"
+                type="password"
+                id="loginPassword"
+                placeholder="Sua senha">
+
+        </div>
+
+
+        <br>
+
+        <button
+            class="btn btn-primary"
+            onclick="login()">
+
+            Entrar
+
+        </button>
+
+
+        <div class="auth-link"
+             onclick="goRegister()">
+
+            Ainda não tenho conta
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     2 — CADASTRO
+===================================================== -->
+
+<section
+    class="screen"
+    id="register">
+
+    <div class="eyebrow">
+        Cadastro
+    </div>
+
+    <h1 class="title">
+        Como você deseja usar o Tech Free?
+    </h1>
+
+    <p class="description">
+        Escolha como pretende utilizar nossa plataforma.
+    </p>
+
+
+    <div class="profile-grid">
+
+
+        <div
+            class="profile-card"
+            onclick="selectProfile('cliente',this)">
+
+            <div class="profile-icon">
+                👤
+            </div>
+
+            <h3>
+                Sou cliente
+            </h3>
+
+            <p>
+                Quero encontrar um técnico.
+            </p>
+
+        </div>
+
+
+        <div
+            class="profile-card"
+            onclick="selectProfile('tecnico',this)">
+
+            <div class="profile-icon">
+                🛠️
+            </div>
+
+            <h3>
+                Sou técnico
+            </h3>
+
+            <p>
+                Quero oferecer meus serviços.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div id="registerForm"
+         style="display:none;">
+
+        <div class="input-group">
+
+            <label>
+                Nome completo
+            </label>
+
+            <input
+                class="input"
+                id="registerName"
+                placeholder="Digite seu nome">
+
+        </div>
+
+
+        <div class="input-group">
+
+            <label>
+                E-mail
+            </label>
+
+            <input
+                class="input"
+                id="registerEmail"
+                placeholder="seu@email.com">
+
+        </div>
+
+
+        <div class="input-group">
+
+            <label>
+                WhatsApp
+            </label>
+
+            <input
+                class="input"
+                id="registerPhone"
+                placeholder="(11) 99999-9999">
+
+        </div>
+
+
+        <div class="input-group">
+
+            <label>
+                Senha
+            </label>
+
+            <input
+                class="input"
+                type="password"
+                id="registerPassword"
+                placeholder="Crie uma senha">
+
+        </div>
+
+
+        <br>
+
+        <button
+            class="btn btn-primary"
+            onclick="finishRegister()">
+
+            Continuar
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     3 — TERMOS
+===================================================== -->
+
+<section
+    class="screen"
+    id="terms">
+
+    <div class="eyebrow">
+        Segurança
+    </div>
+
+    <h1 class="title">
+        Antes de começar
+    </h1>
+
+    <p class="description">
+        Leia e aceite os termos para utilizar o Tech Free.
+    </p>
+
+
+    <div class="terms">
+
+        <h3>
+            Termos de Uso
+        </h3>
+
+        <p>
+            O Tech Free conecta clientes a profissionais
+            independentes de suporte técnico.
+        </p>
+
+
+        <h4>
+            Uso da plataforma
+        </h4>
+
+        <p>
+            O usuário deve fornecer informações verdadeiras
+            e utilizar a plataforma de maneira responsável.
+        </p>
+
+
+        <h4>
+            Serviços
+        </h4>
+
+        <p>
+            Os técnicos são responsáveis pelos serviços
+            prestados. O Tech Free atua como intermediador.
+        </p>
+
+
+        <h4>
+            Localização
+        </h4>
+
+        <p>
+            A localização poderá ser utilizada para encontrar
+            técnicos próximos.
+        </p>
+
+
+        <h4>
+            Privacidade
+        </h4>
+
+        <p>
+            Os dados serão tratados de acordo com nossa
+            Política de Privacidade e legislação aplicável.
+        </p>
+
+
+        <h4>
+            Segurança
+        </h4>
+
+        <p>
+            Nunca compartilhe senhas, códigos ou dados
+            sensíveis com terceiros.
+        </p>
+
+    </div>
+
+
+    <div class="checkbox">
+
+        <input
+            type="checkbox"
+            id="acceptTerms">
+
+        <label>
+            Li e concordo com os Termos de Uso e Política
+            de Privacidade.
+        </label>
+
+    </div>
+
+
+    <button
+        class="btn btn-primary"
+        onclick="acceptTerms()">
+
+        Concordar e continuar
+
+    </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     4 — LOCALIZAÇÃO
+===================================================== -->
+
+<section
+    class="screen"
+    id="location">
+
+    <div class="location">
+
+        <div class="location-icon">
+            📍
+        </div>
+
+        <div class="eyebrow">
+            Localização
+        </div>
+
+        <h1 class="title">
+            Onde você está?
+        </h1>
+
+        <p class="description">
+            Precisamos da sua localização para encontrar
+            técnicos disponíveis próximos a você.
+        </p>
+
+
+        <div class="location-info">
+
+            Sua localização será utilizada para calcular
+            distância e disponibilidade de profissionais.
+
+        </div>
+
+
+        <button
+            class="btn btn-primary"
+            onclick="requestLocation()">
+
+            📍 Permitir localização
+
+        </button>
+
+
+        <button
+            class="btn btn-secondary"
+            onclick="manualLocation()">
+
+            Informar CEP manualmente
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     5 — HOME
+===================================================== -->
+
+<section
+    class="screen"
+    id="home">
+
+    <div class="welcome">
+
+        <small>
+            Tudo certo!
+        </small>
+
+        <h2>
+            Como podemos ajudar?
+        </h2>
+
+        <p>
+            Selecione o tipo de problema que está acontecendo.
+        </p>
+
+    </div>
+
+
+    <h2 class="problem-heading">
+        Qual é o problema?
+    </h2>
+
+
+    <div class="problem-grid">
+
+
+        <div
+            class="problem"
+            onclick="chooseProblem('Computador',this)">
+
+            <div class="problem-icon">
+                🖥️
+            </div>
+
+            <h3>
+                Computador
+            </h3>
+
+            <p>
+                PCs e periféricos.
+            </p>
+
+        </div>
+
+
+        <div
+            class="problem"
+            onclick="chooseProblem('Notebook',this)">
+
+            <div class="problem-icon">
+                💻
+            </div>
+
+            <h3>
+                Notebook
+            </h3>
+
+            <p>
+                Sistema e hardware.
+            </p>
+
+        </div>
+
+
+        <div
+            class="problem"
+            onclick="chooseProblem('Celular',this)">
+
+            <div class="problem-icon">
+                📱
+            </div>
+
+            <h3>
+                Celular
+            </h3>
+
+            <p>
+                Android e iPhone.
+            </p>
+
+        </div>
+
+
+        <div
+            class="problem"
+            onclick="chooseProblem('Internet',this)">
+
+            <div class="problem-icon">
+                🌐
+            </div>
+
+            <h3>
+                Internet
+            </h3>
+
+            <p>
+                Wi-Fi e redes.
+            </p>
+
+        </div>
+
+
+        <div
+            class="problem"
+            onclick="chooseProblem('Software',this)">
+
+            <div class="problem-icon">
+                ⚙️
+            </div>
+
+            <h3>
+                Software
+            </h3>
+
+            <p>
+                Programas e sistema.
+            </p>
+
+        </div>
+
+
+        <div
+            class="problem"
+            onclick="chooseProblem('Hardware',this)">
+
+            <div class="problem-icon">
+                🔧
+            </div>
+
+            <h3>
+                Hardware
+            </h3>
+
+            <p>
+                Peças e manutenção.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div
+        class="info-link"
+        onclick="openInfo()">
+
+        ❓ Não sei qual escolher
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     6 — DETALHES
+===================================================== -->
+
+<section
+    class="screen"
+    id="details">
+
+    <div class="eyebrow">
+        Diagnóstico
+    </div>
+
+    <h1 class="title">
+        Conte o que aconteceu
+    </h1>
+
+    <p
+        class="description"
+        id="problemSelectedText">
+
+    </p>
+
+
+    <div class="input-group">
+
+        <label>
+            Descreva o problema
+        </label>
+
+        <textarea
+            class="textarea"
+            id="problemDescription"
+            placeholder="Explique com suas palavras o que está acontecendo..."></textarea>
+
+    </div>
+
+
+    <div
+        style="
+        margin-top:15px;
+        padding:16px;
+        border-radius:15px;
+        background:#f1f7ff;
+        color:#486581;
+        font-size:12px;
+        line-height:1.5;">
+
+        💡 Quanto mais detalhes você fornecer,
+        mais fácil será encontrar o profissional certo.
+
+    </div>
+
+
+    <br>
+
+
+    <button
+        class="btn btn-primary"
+        onclick="startSearch()">
+
+        Encontrar técnico
+
+    </button>
+
+
+    <button
+        class="btn btn-secondary"
+        onclick="showScreen('home')">
+
+        Voltar
+
+    </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     7 — BUSCA
+===================================================== -->
+
+<section
+    class="screen"
+    id="search">
+
+    <div class="search">
+
+        <div class="radar">
+
+            <div class="radar-icon">
+                📍
+            </div>
+
+        </div>
+
+        <h2>
+            Procurando técnico...
+        </h2>
+
+        <p>
+            Estamos procurando o profissional ideal.
+        </p>
+
+        <p
+            class="search-status"
+            id="searchStatus">
+
+            Verificando disponibilidade...
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     8 — TÉCNICO
+===================================================== -->
+
+<section
+    class="screen"
+    id="technician">
+
+    <div class="eyebrow">
+        Encontramos
+    </div>
+
+    <h1 class="title">
+        Técnico disponível
+    </h1>
+
+    <p class="description">
+        Este profissional está disponível para atender
+        sua solicitação.
+    </p>
+
+
+    <div class="technician-card">
+
+        <div class="tech-top">
+
+            <div class="avatar">
+                👨‍💻
+            </div>
+
+            <div>
+
+                <div class="tech-name">
+                    Lucas Almeida
+                </div>
+
+                <div class="verified">
+                    ✓ Técnico verificado
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="rating">
+            ⭐ 4.9 · 127 avaliações
+        </div>
+
+
+        <div class="tags">
+
+            <span class="tag">
+                💻 Computadores
+            </span>
+
+            <span class="tag">
+                🔧 Hardware
+            </span>
+
+            <span class="tag">
+                🌐 Redes
+            </span>
+
+            <span class="tag">
+                📍 1,8 km
+            </span>
+
+            <span class="tag">
+                ⏱️ 8 min
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <br>
+
+
+    <button
+        class="btn btn-primary"
+        onclick="openChat()">
+
+        💬 Conversar com técnico
+
+    </button>
+
+
+    <button
+        class="btn btn-secondary"
+        onclick="startSearch()">
+
+        Procurar outro
+
+    </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     9 — CHAT
+===================================================== -->
+
+<section
+    class="chat-screen"
+    id="chat">
+
+    <div class="chat-header">
+
+        <button
+            class="chat-back"
+            onclick="showScreen('technician')">
+
+            ←
+
+        </button>
+
+
+        <div class="chat-avatar">
+            👨‍💻
+        </div>
+
+
+        <div>
+
+            <div class="chat-name">
+                Lucas Almeida
+            </div>
+
+            <div class="online">
+                ● Online
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="messages"
+        id="messages">
+
+
+        <div class="message received">
+
+            Olá! Sou o Lucas.
+            Vi sua solicitação e estou disponível para ajudar.
+
+            <span class="message-time">
+                agora
+            </span>
+
+        </div>
+
+
+        <div class="message received">
+
+            Pode me explicar um pouco melhor o problema?
+
+            <span class="message-time">
+                agora
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="chat-input">
+
+        <input
+            id="chatInput"
+            placeholder="Digite uma mensagem..."
+            onkeydown="chatEnter(event)">
+
+        <button
+            class="send"
+            onclick="sendMessage()">
+
+            ➤
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     10 — FINAL
+===================================================== -->
+
+<section
+    class="screen"
+    id="finish">
+
+    <div class="success">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h1
+            class="title"
+            style="margin-top:25px;">
+
+            Atendimento concluído!
+
+        </h1>
+
+        <p class="description">
+
+            Como foi sua experiência?
+
+        </p>
+
+
+        <div class="stars">
+
+            <button
+                class="star"
+                onclick="rate(1)">
+                ★
+            </button>
+
+            <button
+                class="star"
+                onclick="rate(2)">
+                ★
+            </button>
+
+            <button
+                class="star"
+                onclick="rate(3)">
+                ★
+            </button>
+
+            <button
+                class="star"
+                onclick="rate(4)">
+                ★
+            </button>
+
+            <button
+                class="star"
+                onclick="rate(5)">
+                ★
+            </button>
+
+        </div>
+
+
+        <textarea
+            class="textarea"
+            placeholder="Conte como foi o atendimento..."></textarea>
+
+
+        <br><br>
+
+
+        <button
+            class="btn btn-primary"
+            onclick="finish()">
+
+            Enviar avaliação
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BOTTOM NAV
+===================================================== -->
+
+<nav
+    class="bottom-nav"
+    id="bottomNav">
+
+    <button
+        class="nav active"
+        onclick="showScreen('home')">
+
+        <span>
+            ⌂
+        </span>
+
+        Início
+
+    </button>
+
+
+    <button
+        class="nav"
+        onclick="historyPage()">
+
+        <span>
+            ◷
+        </span>
+
+        Histórico
+
+    </button>
+
+
+    <button
+        class="nav"
+        onclick="profilePage()">
+
+        <span>
+            ●
+        </span>
+
+        Perfil
+
+    </button>
+
+</nav>
+
+
+
+<!-- =====================================================
+     MODAL
+===================================================== -->
+
+<div
+    class="modal"
+    id="infoModal">
+
+    <div class="modal-box">
+
+        <button
+            class="close"
+            onclick="closeInfo()">
+
+            ×
+
+        </button>
+
+        <h2>
+            Qual categoria devo escolher?
+        </h2>
+
+        <p>
+
+            <strong>Hardware:</strong>
+            problemas físicos do equipamento,
+            como memória, SSD, HD, fonte ou placa.
+
+            <br><br>
+
+            <strong>Software:</strong>
+            Windows, programas, configurações,
+            drivers e vírus.
+
+            <br><br>
+
+            <strong>Internet:</strong>
+            Wi-Fi, roteador, rede ou conexão.
+
+            <br><br>
+
+            <strong>Celular:</strong>
+            problemas em smartphones Android
+            ou iPhone.
+
+            <br><br>
+
+            Se ainda estiver em dúvida,
+            escolha a opção mais próxima e explique
+            o problema para o técnico.
+
+        </p>
+
+        <br>
+
+        <button
+            class="btn btn-primary"
+            onclick="closeInfo()">
+
+            Entendi
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+/* =========================================================
+   ESTADO DA APLICAÇÃO
+========================================================= */
+
+const App = {
+
+    user: {
+        type: null,
+        name: "",
+        email: "",
+        phone: ""
+    },
+
+    location: null,
+
+    problem: {
+        category: "",
+        description: ""
+    },
+
+    technician: {
+        name: "Lucas Almeida",
+        rating: 4.9,
+        distance: "1,8 km",
+        eta: "8 min"
+    }
+
+};
+
+
+/* =========================================================
+   NAVEGAÇÃO
+========================================================= */
+
+function showScreen(id) {
+
+    document
+        .querySelectorAll(".screen, .chat-screen")
+        .forEach(screen => {
+
+            screen.classList.remove("active");
+
+        });
+
+
+    const screen =
+        document.getElementById(id);
+
+
+    if (screen) {
+
+        screen.classList.add("active");
+
+    }
+
+
+    const nav =
+        document.getElementById("bottomNav");
+
+
+    const navigationScreens = [
+        "home",
+        "details",
+        "technician"
+    ];
+
+
+    if (
+        navigationScreens.includes(id)
+    ) {
+
+        nav.classList.add("show");
+
+    } else {
+
+        nav.classList.remove("show");
+
+    }
+
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+function login() {
+
+    const email =
+        document.getElementById("loginEmail").value.trim();
+
+    const password =
+        document.getElementById("loginPassword").value;
+
+
+    if (!email || !password) {
+
+        alert(
+            "Preencha seu e-mail e senha."
+        );
+
+        return;
+
+    }
+
+
+    App.user.name = "Cliente";
+
+
+    goToTerms();
+
+}
+
+
+/* =========================================================
+   CADASTRO
+========================================================= */
+
+function goRegister() {
+
+    showScreen("register");
+
+}
+
+
+function selectProfile(type, element) {
+
+    App.user.type = type;
+
+
+    document
+        .querySelectorAll(".profile-card")
+        .forEach(card => {
+
+            card.classList.remove("selected");
+
+        });
+
+
+    element.classList.add("selected");
+
+
+    document
+        .getElementById("registerForm")
+        .style.display = "block";
+
+}
+
+
+function finishRegister() {
+
+    const name =
+        document
+            .getElementById("registerName")
+            .value.trim();
+
+
+    const email =
+        document
+            .getElementById("registerEmail")
+            .value.trim();
+
+
+    const phone =
+        document
+            .getElementById("registerPhone")
+            .value.trim();
+
+
+    const password =
+        document
+            .getElementById("registerPassword")
+            .value;
+
+
+    if (!name || !email || !phone || !password) {
+
+        alert(
+            "Preencha todos os campos."
+        );
+
+        return;
+
+    }
+
+
+    if (password.length < 6) {
+
+        alert(
+            "A senha precisa ter pelo menos 6 caracteres."
+        );
+
+        return;
+
+    }
+
+
+    App.user.name = name;
+    App.user.email = email;
+    App.user.phone = phone;
+
+
+    goToTerms();
+
+}
+
+
+/* =========================================================
+   TERMOS
+========================================================= */
+
+function goToTerms() {
+
+    showScreen("terms");
+
+}
+
+
+function acceptTerms() {
+
+    const accepted =
+        document
+            .getElementById("acceptTerms")
+            .checked;
+
+
+    if (!accepted) {
+
+        alert(
+            "Você precisa aceitar os Termos de Uso."
+        );
+
+        return;
+
+    }
+
+
+    showScreen("location");
+
+}
+
+
+/* =========================================================
+   LOCALIZAÇÃO
+========================================================= */
+
+function requestLocation() {
+
+    if (!navigator.geolocation) {
+
+        alert(
+            "Seu navegador não suporta geolocalização."
+        );
+
+        return;
+
+    }
+
+
+    navigator.geolocation.getCurrentPosition(
+
+        position => {
+
+            App.location = {
+
+                latitude:
+                    position.coords.latitude,
+
+                longitude:
+                    position.coords.longitude
+
+            };
+
+
+            showScreen("home");
+
+        },
+
+        () => {
+
+            alert(
+                "Não foi possível acessar sua localização. Você pode informar seu CEP."
+            );
+
+        },
+
+        {
+
+            enableHighAccuracy: true,
+
+            timeout: 10000,
+
+            maximumAge: 0
+
+        }
+
+    );
+
+}
+
+
+function manualLocation() {
+
+    const cep =
+        prompt(
+            "Digite seu CEP:"
+        );
+
+
+    if (!cep) return;
+
+
+    App.location = {
+        cep: cep
+    };
+
+
+    showScreen("home");
+
+}
+
+
+/* =========================================================
+   PROBLEMA
+========================================================= */
+
+function chooseProblem(category, element) {
+
+    App.problem.category = category;
+
+
+    document
+        .querySelectorAll(".problem")
+        .forEach(card => {
+
+            card.classList.remove("selected");
+
+        });
+
+
+    element.classList.add("selected");
+
+
+    document
+        .getElementById("problemSelectedText")
+        .innerHTML =
+        "Categoria selecionada: <strong>" +
+        category +
+        "</strong>. Explique o que está acontecendo.";
+
+
+    setTimeout(() => {
+
+        showScreen("details");
+
+    }, 180);
+
+}
+
+
+/* =========================================================
+   BUSCA
+========================================================= */
+
+function startSearch() {
+
+    const description =
+        document
+            .getElementById("problemDescription")
+            .value.trim();
+
+
+    App.problem.description =
+        description;
+
+
+    showScreen("search");
+
+
+    const statuses = [
+
+        "Localizando profissionais...",
+
+        "Calculando distância...",
+
+        "Verificando disponibilidade...",
+
+        "Analisando especialidades...",
+
+        "Encontramos um profissional!"
+
+    ];
+
+
+    let index = 0;
+
+
+    const status =
+        document.getElementById("searchStatus");
+
+
+    const interval =
+        setInterval(() => {
+
+            status.innerText =
+                statuses[index];
+
+
+            index++;
+
+
+            if (index >= statuses.length) {
+
+                clearInterval(interval);
+
+            }
+
+        }, 700);
+
+
+    setTimeout(() => {
+
+        showScreen("technician");
+
+    }, 3600);
+
+}
+
+
+/* =========================================================
+   CHAT
+========================================================= */
+
+function openChat() {
+
+    showScreen("chat");
+
+
+    const messages =
+        document.getElementById("messages");
+
+
+    messages.scrollTop =
+        messages.scrollHeight;
+
+}
+
+
+function sendMessage() {
+
+    const input =
+        document.getElementById("chatInput");
+
+
+    const text =
+        input.value.trim();
+
+
+    if (!text) return;
+
+
+    addMessage(
+        text,
+        "sent"
+    );
+
+
+    input.value = "";
+
+
+    setTimeout(() => {
+
+        addMessage(
+            technicianReply(text),
+            "received"
+        );
+
+    }, 1100);
+
+}
+
+
+function addMessage(text,type) {
+
+    const messages =
+        document.getElementById("messages");
+
+
+    const message =
+        document.createElement("div");
+
+
+    message.className =
+        "message " + type;
+
+
+    message.innerHTML =
+        text +
+        '<span class="message-time">agora</span>';
+
+
+    messages.appendChild(message);
+
+
+    messages.scrollTop =
+        messages.scrollHeight;
+
+}
+
+
+function technicianReply(text) {
+
+    const message =
+        text.toLowerCase();
+
+
+    if (
+        message.includes("não liga") ||
+        message.includes("nao liga")
+    ) {
+
+        return "Entendi. Quando você aperta o botão de ligar, alguma luz acende ou alguma ventoinha começa a girar?";
+
+    }
+
+
+    if (
+        message.includes("internet") ||
+        message.includes("wifi") ||
+        message.includes("wi-fi")
+    ) {
+
+        return "Certo. O problema acontece em todos os dispositivos ou apenas nesse equipamento?";
+
+    }
+
+
+    if (
+        message.includes("lento") ||
+        message.includes("travando")
+    ) {
+
+        return "Entendi. Vou verificar alguns pontos para identificar o que pode estar causando a lentidão.";
+
+    }
+
+
+    return "Entendi. Obrigado pelas informações. Vou analisar o problema e te orientar.";
+
+}
+
+
+function chatEnter(event) {
+
+    if (event.key === "Enter") {
+
+        sendMessage();
+
+    }
+
+}
+
+
+/* =========================================================
+   AVALIAÇÃO
+========================================================= */
+
+function rate(number) {
+
+    document
+        .querySelectorAll(".star")
+        .forEach((star,index) => {
+
+            star.classList.toggle(
+                "active",
+                index < number
+            );
+
+        });
+
+}
+
+
+function finish() {
+
+    alert(
+        "Obrigado! Sua avaliação foi registrada."
+    );
+
+
+    showScreen("home");
+
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+function openInfo() {
+
+    document
+        .getElementById("infoModal")
+        .classList.add("show");
+
+}
+
+
+function closeInfo() {
+
+    document
+        .getElementById("infoModal")
+        .classList.remove("show");
+
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+function notifications() {
+
+    alert(
+        "Você não possui novas notificações."
+    );
+
+}
+
+
+function historyPage() {
+
+    alert(
+        "Histórico de atendimentos — em desenvolvimento."
+    );
+
+}
+
+
+function profilePage() {
+
+    alert(
+        "Perfil do usuário — em desenvolvimento."
+    );
+
+}
+
+</script>
+
+</div>
+
+</div>
+
+</body>
+</html>
+```
